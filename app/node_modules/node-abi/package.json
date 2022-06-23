@@ -1,0 +1,22 @@
+{
+  "name": "node-abi",
+  "version": "2.30.1",
+  "description": "Get the Node ABI for a given target and runtime, and vice versa.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgeiger/node-abi.git"
+  },
+  "author": "Lukas Geiger",
+  "license": "MIT",
+  "homepage": "https://github.com/lgeiger/node-abi#readme",
+  "devDependencies": {
+    "got": "^10.6.0",
+    "semantic-release": "^15.8.0",
+    "tape": "^4.6.3",
+    "travis-deploy-once": "^5.0.1"
+  },
+  "dependencies": {
+    "semver": "^5.4.1"
+  }
+}

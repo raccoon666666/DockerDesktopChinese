@@ -1,0 +1,19 @@
+{
+  "name": "requires-port",
+  "version": "1.0.0",
+  "description": "Check if a protocol requires a certain port number to be added to an URL.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unshiftio/requires-port"
+  },
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "homepage": "https://github.com/unshiftio/requires-port",
+  "devDependencies": {
+    "assume": "1.3.x",
+    "istanbul": "0.4.x",
+    "mocha": "2.3.x",
+    "pre-commit": "1.1.x"
+  }
+}

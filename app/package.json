@@ -1,0 +1,28 @@
+{
+  "name": "@docker/desktop",
+  "productName": "Docker Desktop",
+  "packageManager": "yarn@3.2.0",
+  "version": "4.9.1",
+  "description": "Frontend for Docker Desktop",
+  "main": "src_transpiled/index.js",
+  "private": true,
+  "dependencies": {
+    "@bugsnag/js": "^7.10.1",
+    "@docker/extension-preload": "workspace:*",
+    "@rumpl/node-eventsource": "^1.0.0",
+    "axios": "^0.26.0",
+    "dockerode": "^3.3.1",
+    "electron-debug": "^3.2.0",
+    "electron-fetch": "^1.7.4",
+    "electron-store": "^8.0.1",
+    "forcefocus": "^1.1.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "node-pty": "^0.10.1",
+    "redact-secrets": "^1.0.0",
+    "regedit": "^4.0.0",
+    "source-map-support": "^0.5.19",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1"
+  }
+}

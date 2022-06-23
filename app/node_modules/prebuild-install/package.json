@@ -1,0 +1,41 @@
+{
+  "name": "prebuild-install",
+  "version": "5.3.6",
+  "description": "A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform",
+  "dependencies": {
+    "detect-libc": "^1.0.3",
+    "expand-template": "^2.0.3",
+    "github-from-package": "0.0.0",
+    "minimist": "^1.2.3",
+    "mkdirp-classic": "^0.5.3",
+    "napi-build-utils": "^1.0.1",
+    "node-abi": "^2.7.0",
+    "noop-logger": "^0.1.1",
+    "npmlog": "^4.0.1",
+    "pump": "^3.0.0",
+    "rc": "^1.2.7",
+    "simple-get": "^3.0.3",
+    "tar-fs": "^2.0.0",
+    "tunnel-agent": "^0.6.0",
+    "which-pm-runs": "^1.0.0"
+  },
+  "devDependencies": {
+    "a-native-module": "^1.0.0",
+    "hallmark": "^3.0.0",
+    "nock": "^10.0.6",
+    "rimraf": "^2.5.2",
+    "standard": "^13.0.2",
+    "tape": "^4.5.1"
+  },
+  "bin": "./bin.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prebuild/prebuild-install.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "homepage": "https://github.com/prebuild/prebuild-install",
+  "engines": {
+    "node": ">=6"
+  }
+}

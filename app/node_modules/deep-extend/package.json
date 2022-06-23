@@ -1,0 +1,30 @@
+{
+  "name": "deep-extend",
+  "description": "Recursive object extending",
+  "license": "MIT",
+  "version": "0.6.0",
+  "homepage": "https://github.com/unclechu/node-deep-extend",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/unclechu/node-deep-extend/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unclechu/node-deep-extend.git"
+  },
+  "author": "Viacheslav Lotsmanov <lotsmanov89@gmail.com>",
+  "main": "lib/deep-extend.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "5.2.0",
+    "should": "13.2.1"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ]
+}

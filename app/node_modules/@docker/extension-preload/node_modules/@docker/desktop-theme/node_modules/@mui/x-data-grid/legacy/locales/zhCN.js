@@ -1,0 +1,116 @@
+import { zhCN as zhCNCore } from '@mui/material/locale';
+import { getGridLocalization } from '../utils/getGridLocalization';
+var zhCNGrid = {
+  // Root
+  noRowsLabel: '没有数据。',
+  noResultsOverlayLabel: '未找到数据。',
+  errorOverlayDefaultLabel: '发生错误。',
+  // Density selector toolbar button text
+  toolbarDensity: '表格密度',
+  toolbarDensityLabel: '表格密度',
+  toolbarDensityCompact: '紧密',
+  toolbarDensityStandard: '标准',
+  toolbarDensityComfortable: '稀疏',
+  // Columns selector toolbar button text
+  toolbarColumns: '列',
+  toolbarColumnsLabel: '选择列',
+  // Filters toolbar button text
+  toolbarFilters: '筛选器',
+  toolbarFiltersLabel: '显示筛选器',
+  toolbarFiltersTooltipHide: '隐藏筛选器',
+  toolbarFiltersTooltipShow: '显示筛选器',
+  toolbarFiltersTooltipActive: function toolbarFiltersTooltipActive(count) {
+    return "".concat(count, " \u4E2A\u7B5B\u9009\u5668");
+  },
+  // Export selector toolbar button text
+  toolbarExport: '导出',
+  toolbarExportLabel: '导出',
+  toolbarExportCSV: '导出至CSV',
+  // toolbarExportPrint: 'Print',
+  // Columns panel text
+  columnsPanelTextFieldLabel: '搜索列',
+  columnsPanelTextFieldPlaceholder: '列名',
+  columnsPanelDragIconLabel: '重排序列',
+  columnsPanelShowAllButton: '显示所有',
+  columnsPanelHideAllButton: '隐藏所有',
+  // Filter panel text
+  filterPanelAddFilter: '添加筛选器',
+  filterPanelDeleteIconLabel: '删除',
+  // filterPanelLinkOperator: 'Logic operator',
+  filterPanelOperators: '操作器',
+  // TODO v6: rename to filterPanelOperator
+  filterPanelOperatorAnd: '与',
+  filterPanelOperatorOr: '或',
+  filterPanelColumns: '列',
+  filterPanelInputLabel: '值',
+  filterPanelInputPlaceholder: '筛选值',
+  // Filter operators text
+  filterOperatorContains: '包含',
+  filterOperatorEquals: '等于',
+  filterOperatorStartsWith: '开始于',
+  filterOperatorEndsWith: '结束于',
+  filterOperatorIs: '是',
+  filterOperatorNot: '不是',
+  filterOperatorAfter: '在后面',
+  filterOperatorOnOrAfter: '正在后面',
+  filterOperatorBefore: '在前面',
+  filterOperatorOnOrBefore: '正在前面',
+  filterOperatorIsEmpty: '为空',
+  filterOperatorIsNotEmpty: '不为空',
+  // filterOperatorIsAnyOf: 'is any of',
+  // Filter values text
+  filterValueAny: '任何',
+  filterValueTrue: '真',
+  filterValueFalse: '假',
+  // Column menu text
+  columnMenuLabel: '菜单',
+  columnMenuShowColumns: '显示',
+  columnMenuFilter: '筛选器',
+  columnMenuHideColumn: '隐藏',
+  columnMenuUnsort: '恢复默认',
+  columnMenuSortAsc: '升序',
+  columnMenuSortDesc: '降序',
+  // Column header text
+  columnHeaderFiltersTooltipActive: function columnHeaderFiltersTooltipActive(count) {
+    return count !== 1 ? "".concat(count, " \u4E2A\u7B5B\u9009\u5668") : "".concat(count, " \u4E2A\u7B5B\u9009\u5668");
+  },
+  columnHeaderFiltersLabel: '显示筛选器',
+  columnHeaderSortIconLabel: '排序',
+  // Rows selected footer text
+  footerRowSelected: function footerRowSelected(count) {
+    return "\u5171\u9009\u4E2D\u4E86".concat(count.toLocaleString(), "\u884C");
+  },
+  // Total row amount footer text
+  footerTotalRows: '所有行:',
+  // Total visible row amount footer text
+  footerTotalVisibleRows: function footerTotalVisibleRows(visibleCount, totalCount) {
+    return "".concat(visibleCount.toLocaleString(), " / ").concat(totalCount.toLocaleString());
+  },
+  // Checkbox selection text
+  checkboxSelectionHeaderName: '多选框',
+  // checkboxSelectionSelectAllRows: 'Select all rows',
+  // checkboxSelectionUnselectAllRows: 'Unselect all rows',
+  // checkboxSelectionSelectRow: 'Select row',
+  // checkboxSelectionUnselectRow: 'Unselect row',
+  // Boolean cell text
+  booleanCellTrueLabel: '真',
+  booleanCellFalseLabel: '假' // Actions cell more text
+  // actionsCellMore: 'more',
+  // Column pinning text
+  // pinToLeft: 'Pin to left',
+  // pinToRight: 'Pin to right',
+  // unpin: 'Unpin',
+  // Tree Data
+  // treeDataGroupingHeaderName: 'Group',
+  // treeDataExpand: 'see children',
+  // treeDataCollapse: 'hide children',
+  // Grouping columns
+  // groupingColumnHeaderName: 'Group',
+  // groupColumn: name => `Group by ${name}`,
+  // unGroupColumn: name => `Stop grouping by ${name}`,
+  // Master/detail
+  // expandDetailPanel: 'Expand',
+  // collapseDetailPanel: 'Collapse',
+
+};
+export var zhCN = getGridLocalization(zhCNGrid, zhCNCore);

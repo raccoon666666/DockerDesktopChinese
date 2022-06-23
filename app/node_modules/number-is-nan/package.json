@@ -1,0 +1,21 @@
+{
+  "name": "number-is-nan",
+  "version": "1.0.1",
+  "description": "ES2015 Number.isNaN() ponyfill",
+  "license": "MIT",
+  "repository": "sindresorhus/number-is-nan",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "ava": "*"
+  }
+}

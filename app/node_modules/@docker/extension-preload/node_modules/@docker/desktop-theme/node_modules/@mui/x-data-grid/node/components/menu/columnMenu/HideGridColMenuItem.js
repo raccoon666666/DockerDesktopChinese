@@ -1,0 +1,83 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.HideGridColMenuItem = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _MenuItem = _interopRequireDefault(require("@mui/material/MenuItem"));
+
+var _useGridApiContext = require("../../../hooks/utils/useGridApiContext");
+
+var _useGridRootProps = require("../../../hooks/utils/useGridRootProps");
+
+var _columns = require("../../../hooks/features/columns");
+
+var _jsxRuntime = require("react/jsx-runtime");
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const HideGridColMenuItem = props => {
+  const {
+    column,
+    onClick
+  } = props;
+  const apiRef = (0, _useGridApiContext.useGridApiContext)();
+  const rootProps = (0, _useGridRootProps.useGridRootProps)();
+  const timeoutRef = React.useRef();
+  const visibleColumns = (0, _columns.gridVisibleColumnDefinitionsSelector)(apiRef);
+  const columnsWithMenu = visibleColumns.filter(col => col.disableColumnMenu !== true); // do not allow to hide the last column with menu
+
+  const disabled = columnsWithMenu.length === 1;
+  const toggleColumn = React.useCallback(event => {
+    /**
+     * Disabled `MenuItem` would trigger `click` event
+     * after imperative `.click()` call on HTML element.
+     * Also, click is triggered in testing environment as well.
+     */
+    if (disabled) {
+      return;
+    }
+
+    onClick(event); // time for the transition
+
+    timeoutRef.current = setTimeout(() => {
+      apiRef.current.setColumnVisibility(column == null ? void 0 : column.field, false);
+    }, 100);
+  }, [apiRef, column == null ? void 0 : column.field, onClick, disabled]);
+  React.useEffect(() => {
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
+  if (rootProps.disableColumnSelector) {
+    return null;
+  }
+
+  if (column.hideable === false) {
+    return null;
+  }
+
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_MenuItem.default, {
+    onClick: toggleColumn,
+    disabled: disabled,
+    children: apiRef.current.getLocaleText('columnMenuHideColumn')
+  });
+};
+
+exports.HideGridColMenuItem = HideGridColMenuItem;
+process.env.NODE_ENV !== "production" ? HideGridColMenuItem.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // | To update them edit the TypeScript types and run "yarn proptypes"  |
+  // ----------------------------------------------------------------------
+  column: _propTypes.default.object.isRequired,
+  onClick: _propTypes.default.func.isRequired
+} : void 0;

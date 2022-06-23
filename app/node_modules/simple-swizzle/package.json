@@ -1,0 +1,22 @@
+{
+  "name": "simple-swizzle",
+  "description": "Simply swizzle your arguments",
+  "version": "0.2.2",
+  "author": "Qix (http://github.com/qix-)",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "repository": "qix-/node-simple-swizzle",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "should": "^7.0.1",
+    "xo": "^0.7.1"
+  },
+  "dependencies": {
+    "is-arrayish": "^0.3.1"
+  }
+}

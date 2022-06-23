@@ -1,0 +1,22 @@
+{
+  "name": "semver",
+  "version": "5.7.1",
+  "description": "The semantic version parser used by npm.",
+  "main": "semver.js",
+  "devDependencies": {
+    "tap": "^13.0.0-rc.18"
+  },
+  "license": "ISC",
+  "repository": "https://github.com/npm/node-semver",
+  "bin": {
+    "semver": "./bin/semver"
+  },
+  "files": [
+    "bin",
+    "range.bnf",
+    "semver.js"
+  ],
+  "tap": {
+    "check-coverage": true
+  }
+}
