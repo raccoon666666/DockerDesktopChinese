@@ -9,9 +9,9 @@ Docker汉化版	DockerDesktop汉化版	Docker Windows汉化版	Docker中文版
 
 ##### 效果图
 
-![image-20220623183747749](/README.assets/image-20220623183747749.png)
+<img src="./README.assets/image-20220623183747749.png" alt="image-20220623183747749" />
 
-![image-20220623183808530](/README.assets/image-20220623183808530.png)
+<img src="./README.assets/image-20220623183808530.png" alt="image-20220623183808530" />
 
 ##### 汉化方法
 
